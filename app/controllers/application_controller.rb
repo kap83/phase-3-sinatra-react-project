@@ -9,6 +9,8 @@ class ApplicationController < Sinatra::Base
     shows.to_json(include: :genre)
   end
 
+
+  #might have to post through /genres and set up in the models that genre accepts_nested_attributes_for :shows
   post "/shows" do
     show = Show.create(
       title: params[:title],
