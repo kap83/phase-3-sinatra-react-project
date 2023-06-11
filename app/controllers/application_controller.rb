@@ -1,5 +1,4 @@
 require 'pry'
-
 class ApplicationController < Sinatra::Base
   set :default_content_type, 'application/json'
   
@@ -29,5 +28,18 @@ class ApplicationController < Sinatra::Base
     show.to_json
   end
 
+  patch '/shows/:id' do
+    show = Show.find(params[:id])
+    show.update(
+      title: params[:title],
+      genre_id: params[:genre_id],
+      seasons: params[:seasons],
+      number_of_episodes: params[:number_of_episodes],
+      original_language: params[:original_language],
+      ongoing: params[:ongoing]
+    )
+    #possibly (include: :genre)
+    show.to_json
+  end
 
 end
