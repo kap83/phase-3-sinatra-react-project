@@ -13,16 +13,18 @@
 ActiveRecord::Schema.define(version: 2023_06_01_213835) do
 
   create_table "genres", force: :cascade do |t|
-    t.string "category"
+    t.string "name"
   end
 
   create_table "shows", force: :cascade do |t|
     t.string "title"
     t.integer "genre_id"
     t.integer "seasons"
-    t.integer "number_of_episodes"
-    t.string "original_language"
+    t.integer "episodes"
+    t.string "language"
     t.boolean "ongoing"
+    t.index ["genre_id"], name: "index_shows_on_genre_id"
   end
 
+  add_foreign_key "shows", "genres"
 end
