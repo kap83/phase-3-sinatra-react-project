@@ -21,7 +21,7 @@ class ShowsController < ApplicationController
         language: params[:language],
         ongoing: params[:ongoing],
       )
-      show.to_json
+      show.to_json(include: :genre)
     end
 
     patch '/genres/:genre_id/shows/:id' do 
