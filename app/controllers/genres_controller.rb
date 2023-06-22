@@ -6,12 +6,4 @@ class GenresController < ApplicationController
     end
 
 
-
-
-    delete '/genres/:id' do 
-        genre = Genre.find(params[:id])
-        genre.destroy
-    end
-
-
 end
