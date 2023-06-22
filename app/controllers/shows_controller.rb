@@ -12,10 +12,9 @@ class ShowsController < ApplicationController
       show.to_json
     end
 
-    post 'genres/:genre_id/shows' do
+    post '/genres/:genre_id/shows' do
       genre = Genre.find(params[:genre_id])
-      binding.pry
-      show = genre.shows.Create(
+      show = genre.shows.create(
         title: params[:title],
         seasons: params[:seasons],
         episodes: params[:episodes],
@@ -25,11 +24,11 @@ class ShowsController < ApplicationController
       show.to_json
     end
 
-    patch '/shows/:id' do 
+    patch '/genres/:genre_id/shows/:id' do 
+      genre = Genre.find(params[:genre_id])
       show = Show.find(params[:id])
-      show.update(
+      genre.shows.update(
         title: params[:title],
-       
         seasons: params[:seasons],
         episodes: params[:episodes],
         language: params[:language],
