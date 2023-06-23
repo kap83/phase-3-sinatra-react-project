@@ -26,8 +26,8 @@ class ShowsController < ApplicationController
 
     patch '/genres/:genre_id/shows/:id' do 
       genre = Genre.find(params[:genre_id])
-      show = Show.find(params[:id])
-      genre.shows.update(
+      show = genre.shows.find(params[:id])
+      show.update(
         title: params[:title],
         seasons: params[:seasons],
         episodes: params[:episodes],
