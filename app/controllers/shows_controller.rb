@@ -2,10 +2,6 @@ require 'pry'
 
 class ShowsController < ApplicationController
 
-    get "/shows" do 
-        shows = Show.all
-        shows.to_json(include: :genre)
-    end
     
     get "/shows/:id" do
       show = Show.find(params[:id])

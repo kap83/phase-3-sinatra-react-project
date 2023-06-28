@@ -6,12 +6,13 @@ class GenresController < ApplicationController
     end
 
 
-    post '/genre' do
+    post "/genres" do
       genre = Genre.create(
-        name: params[:name]
+          name: params[:name],
+          id: params[:id]
       )
-      genre.to_json
-    end
+      genre.to_json(include: :shows)
+  end
 
    
       delete "/genres/:id" do
