@@ -14,7 +14,6 @@ class ShowsController < ApplicationController
         seasons: params[:seasons],
         episodes: params[:episodes],
         language: params[:language],
-        ongoing: params[:ongoing],
       )
       show.to_json
     end
@@ -27,7 +26,6 @@ class ShowsController < ApplicationController
         seasons: params[:seasons],
         episodes: params[:episodes],
         language: params[:language],
-        ongoing: params[:ongoing],
       )
       show.to_json
     end
