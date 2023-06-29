@@ -2,12 +2,11 @@ require 'pry'
 
 class ShowsController < ApplicationController
 
-    
-    get "/shows/:id" do
-      show = Show.find(params[:id])
-      show.to_json
-    end
-
+  get '/shows' do
+    show = Show.all
+    craft.to_json
+  end
+   
     post '/genres/:genre_id/shows' do
       genre = Genre.find(params[:genre_id])
       show = genre.shows.create(

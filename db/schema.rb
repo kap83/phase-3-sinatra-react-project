@@ -22,7 +22,6 @@ ActiveRecord::Schema.define(version: 2023_06_01_213835) do
     t.integer "seasons"
     t.integer "episodes"
     t.string "language"
-    t.boolean "ongoing"
     t.index ["genre_id"], name: "index_shows_on_genre_id"
   end
 

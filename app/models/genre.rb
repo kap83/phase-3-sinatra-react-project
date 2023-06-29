@@ -1,4 +1,4 @@
 class Genre < ActiveRecord::Base
-    has_many :shows, dependent: :destroy
+    has_many :shows
 
 end

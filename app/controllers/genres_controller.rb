@@ -5,7 +5,6 @@ class GenresController < ApplicationController
         genres.to_json(include: :shows)
     end
 
-
     post "/genres" do
       genre = Genre.create(
           name: params[:name],
@@ -14,9 +13,4 @@ class GenresController < ApplicationController
       genre.to_json(include: :shows)
   end
 
-   
-      delete "/genres/:id" do
-        genre = Genre.find(params[:id])
-        genre.destroy
-      end
 end

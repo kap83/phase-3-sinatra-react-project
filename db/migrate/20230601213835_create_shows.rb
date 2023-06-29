@@ -6,8 +6,6 @@ class CreateShows < ActiveRecord::Migration[6.1]
         t.integer :seasons 
         t.integer :episodes
         t.string :language
-        t.boolean :ongoing
-
       end
     end
   end
