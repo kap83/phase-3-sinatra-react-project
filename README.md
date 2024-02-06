@@ -1,9 +1,12 @@
 # TV Show Catalogue 
 
-A great place to organize your to watch list.  
+A place to keep track of your To Be Watched pile.
 
 ## Functionality
 
-Shows belong to Genre for easy organization. Full CRUD capabilities for shows. Add genres as needed. 
+This app uses a React frontend and a Ruby/Sinatra/SQLite3 backend
 
-The code for the rendering of data using React can be found here: https://github.com/kap83/my-app-frontend
+Shows belong to genre for easy organization. 
+Full CRUD capabilities for shows. 
+
+Frontend code can be found here: https://github.com/kap83/my-app-frontend
