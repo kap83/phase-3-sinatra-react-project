@@ -2,6 +2,8 @@
 
 A place to keep track of your To Be Watched pile.
 
+Demo: https://youtu.be/4yNwKN9qKMY
+
 ## Functionality
 
 This app uses a React frontend and a Ruby/Sinatra/SQLite3 backend. Seed data has been included for trial purposes.
